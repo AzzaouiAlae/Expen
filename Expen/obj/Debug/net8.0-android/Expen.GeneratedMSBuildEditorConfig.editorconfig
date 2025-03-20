@@ -1,0 +1,181 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Expen
+build_property.ProjectDir = F:\OneDrive\Source\Maui\080-My expense\Expen\Expen\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/Page/PageCategoryAddNew.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.Page.PageCategoryAddNew.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\PageCategoryAddNew.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\PageCategoryAddNew.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/Page/PageHome.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.Page.PageHome.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\PageHome.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\PageHome.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/Page/PageReport.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.Page.PageReport.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\PageReport.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\PageReport.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/Page/PageStrat.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.Page.PageStrat.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\PageStrat.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\PageStrat.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/Page/PageTransaction.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.Page.PageTransaction.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\PageTransaction.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\PageTransaction.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/Page/PageTransactionAddEdit.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.Page.PageTransactionAddEdit.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\PageTransactionAddEdit.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\PageTransactionAddEdit.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/Page/PageTransfer.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.Page.PageTransfer.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\PageTransfer.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\PageTransfer.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/Page/PageWalletAddEdit.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.Page.PageWalletAddEdit.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\PageWalletAddEdit.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\PageWalletAddEdit.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/Page/PageWalletDetails.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.Page.PageWalletDetails.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\PageWalletDetails.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\PageWalletDetails.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/Page/PageWallets.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.Page.PageWallets.xaml
+build_metadata.AdditionalFiles.TargetPath = Page\PageWallets.xaml
+build_metadata.AdditionalFiles.RelativePath = Page\PageWallets.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/View/ViewAnalysis.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.View.ViewAnalysis.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewAnalysis.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewAnalysis.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/View/ViewAnalysisWallet.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.View.ViewAnalysisWallet.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewAnalysisWallet.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewAnalysisWallet.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/View/ViewCategorySelector.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.View.ViewCategorySelector.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewCategorySelector.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewCategorySelector.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/View/ViewDefaultIcon.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.View.ViewDefaultIcon.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewDefaultIcon.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewDefaultIcon.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/View/ViewEditeDateTime.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.View.ViewEditeDateTime.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewEditeDateTime.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewEditeDateTime.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/View/ViewReportAnalysis.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.View.ViewReportAnalysis.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewReportAnalysis.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewReportAnalysis.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/View/ViewSelectedCategory.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.View.ViewSelectedCategory.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewSelectedCategory.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewSelectedCategory.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/View/ViewSelectedWallet.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.View.ViewSelectedWallet.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewSelectedWallet.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewSelectedWallet.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/View/ViewTabBar.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.View.ViewTabBar.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewTabBar.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewTabBar.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/View/ViewTransaction.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.View.ViewTransaction.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewTransaction.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewTransaction.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/View/ViewWallet.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.View.ViewWallet.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewWallet.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewWallet.xaml
+
+[F:/OneDrive/Source/Maui/080-My expense/Expen/Expen/View/ViewWalletSelector.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Expen.View.ViewWalletSelector.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ViewWalletSelector.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ViewWalletSelector.xaml

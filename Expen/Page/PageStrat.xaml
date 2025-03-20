@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.PageStrat"  Shell.NavBarIsVisible="False"
+             >
+
+    <Grid Background="#E5DBF3">
+        
+        <Frame CornerRadius="30" VerticalOptions="Center" >            
+            <VerticalStackLayout Padding="20" Background="White" Spacing="12">
+                
+                <Label Text="Create a profile" FontSize="25" />                                   
+                <Entry Placeholder="Name" x:Name="txtName" HorizontalTextAlignment="Center"/>
+
+                <Image HeightRequest="120" HorizontalOptions="Center" VerticalOptions="Center" x:Name="imgProfile" Source="photog.png" Aspect="AspectFit">
+                    <Image.Clip>
+                        <RoundRectangleGeometry CornerRadius="60" Rect="0,0,120,120"/>                        
+                    </Image.Clip>
+                </Image>
+
+                <Button Text="Save" x:Name="btnCreate" Clicked="btnCreate_Clicked"/>                
+
+            </VerticalStackLayout>
+        </Frame>
+        
+    </Grid>
+    
+</ContentPage>

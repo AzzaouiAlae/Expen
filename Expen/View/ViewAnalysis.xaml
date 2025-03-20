@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.ViewAnalysis">
+
+    <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,Auto" ColumnSpacing="10" RowSpacing="20">
+        <VerticalStackLayout VerticalOptions="End">
+            <Label Text="0" x:Name="lblBlue" HorizontalOptions="Center"/>
+            <Border StrokeShape="RoundRectangle 15" WidthRequest="60" HeightRequest="0" x:Name="boxBlue">
+                <Border.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#AAF" Offset="2"/>
+                        <GradientStop Color="#00B" Offset="0"/>
+                    </RadialGradientBrush>
+                </Border.Background>                
+            </Border>            
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Column="1" VerticalOptions="End">
+            <Label Text="0" x:Name="lblRed" HorizontalOptions="Center"/>
+            <Border StrokeShape="RoundRectangle 15"  WidthRequest="60" HeightRequest="0" x:Name="boxRed">                              
+                <Border.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FAA" Offset="2"/>
+                        <GradientStop Color="#B00" Offset="0"/>
+                    </RadialGradientBrush>
+                </Border.Background>
+            </Border>
+        </VerticalStackLayout>
+        
+        <Label Grid.ColumnSpan="2" Grid.Row="1" x:Name="lblMonth"/>
+    </Grid>
+    
+</ContentView>

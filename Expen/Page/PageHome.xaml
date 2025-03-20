@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.PageHome" Shell.NavBarIsVisible="False"
+             xmlns:Local="clr-namespace:Expen" >
+
+    <Grid RowDefinitions="*,Auto" Background="#EBEBEB">
+        <ScrollView Padding="0,0,0,10">
+            <VerticalStackLayout Spacing="10" >
+
+                <Grid ColumnDefinitions="*,*" Padding="16" >
+                    <Image  HeightRequest="65" WidthRequest="65" HorizontalOptions="Start" x:Name="imgProfile" Source="photog.png">
+                        <Image.Clip>
+                            <RoundRectangleGeometry CornerRadius="50" Rect="0,0,65,65" />
+                        </Image.Clip>
+                    </Image>
+
+                    <Image Grid.Column="1" HeightRequest="65" WidthRequest="65" Source="photof.png" Aspect="Fill" HorizontalOptions="End">
+                        <Image.Clip>
+                            <RoundRectangleGeometry CornerRadius="50" Rect="0,0,65,65"/>
+                        </Image.Clip>
+                    </Image>
+                </Grid>
+
+                <Label FontSize="25" Margin="16,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Hello, " TextColor="#777" />
+                            <Span x:Name="txtName" />
+                            <Span Text="!"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Border Background="#FFF" StrokeShape="RoundRectangle 20"  >
+                    <VerticalStackLayout Spacing="15" Padding="16,25,16,0">
+                        <HorizontalStackLayout Spacing="5">
+                            <Label  Text="Your Wallet "  FontSize="20" />
+                            <Label  x:Name="lblWalletCount" Text="(0)"  FontSize="12" />
+                        </HorizontalStackLayout>
+
+                        <ScrollView Orientation="Horizontal"  >
+                            <HorizontalStackLayout HeightRequest="120" Spacing="10" x:Name="hLayoutWallets" />
+                        </ScrollView>
+
+                        <Border Margin="-16,0,-16,-15"/>
+                        <Button CornerRadius="0" BackgroundColor="Transparent" Text="Add Wallet" 
+                                TextColor="Black" Clicked="Button_Clicked"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Background="#FFF" Padding="20">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
+                    
+                    <VerticalStackLayout Spacing="25">                        
+                        <Label Text="Income &#38; Expense" FontSize="20" />
+                        <HorizontalStackLayout Spacing="8" x:Name="hLayoutAnalyis">
+                            <RoundRectangle HeightRequest="15" WidthRequest="15" CornerRadius="20" VerticalOptions="Center">
+                                <RoundRectangle.Background>
+                                    <RadialGradientBrush>
+                                        <GradientStop Color="#AAF" Offset="2"/>
+                                        <GradientStop Color="#00B" Offset="0"/>
+                                    </RadialGradientBrush>
+                                </RoundRectangle.Background>
+                            </RoundRectangle>
+                            <Label Text="Income" VerticalOptions="Center" />
+                            
+                            <RoundRectangle HeightRequest="15" WidthRequest="15" CornerRadius="20" VerticalOptions="Center">
+                                <RoundRectangle.Background>
+                                    <RadialGradientBrush>
+                                        <GradientStop Color="#FAA" Offset="2"/>
+                                        <GradientStop Color="#B00" Offset="0"/>
+                                    </RadialGradientBrush>
+                                </RoundRectangle.Background>
+                            </RoundRectangle>
+                            <Label Text="Expense" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <Grid ColumnDefinitions="*,*" HorizontalOptions="Center" ColumnSpacing="30">
+
+                            <Local:ViewAnalysis x:Name="vAnalysis1" isHomeAnalysis="True" VerticalOptions="End"/>
+                            <Local:ViewAnalysis  Grid.Column="1" x:Name="vAnalysis2" isHomeAnalysis="True" VerticalOptions="End"/>
+                            
+                        </Grid>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border StrokeShape="RoundRectangle 20"  Background="#FFF" Padding="20">
+                    <VerticalStackLayout Spacing="20" >
+                        <Label Text="Recent Transactions" FontSize="20"/>
+                        <VerticalStackLayout Spacing="10" x:Name="vLayoutTransactions"/>
+                    </VerticalStackLayout>
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Local:ViewTabBar Grid.Row="1" index="0"/>
+    </Grid>
+    
+</ContentPage>

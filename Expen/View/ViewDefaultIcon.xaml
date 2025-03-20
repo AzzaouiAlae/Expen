@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.ViewDefaultIcon">
+
+
+    <Border Margin="20" Background="White" Padding="20">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="30"/>
+        </Border.StrokeShape>
+        
+        <VerticalStackLayout Spacing="10">
+            
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <ImageButton Source="bank_a.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="bank_b.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="bank_c.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="bank_card_a.png"  WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">                    
+                <ImageButton Source="bank_card_b.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="bank_card_c.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="hand_mony.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="wallet_a.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <ImageButton Source="wallet_c.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="wallet_d.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="wallet_e.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="wallet_b.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <ImageButton Source="wallet_f.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="wallet_g.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="account_a.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="account_b.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <ImageButton Source="box_a.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="box_b.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="box_c.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+                <ImageButton Source="box_d.png" WidthRequest="55" HeightRequest="55" Clicked="btnOk_Clicked"/>
+            </HorizontalStackLayout>
+
+            <Button Text="Cancel" Grid.Column="1" x:Name="btnCancel" Clicked="btnCancel_Clicked"/>
+            
+        </VerticalStackLayout>
+    </Border>
+</ContentView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.PageTransaction" Shell.NavBarIsVisible="False"
+             xmlns:Local="clr-namespace:Expen">
+
+    <Grid Background="#EBEBEB" RowDefinitions="*,Auto">
+        <Border VerticalOptions="Center" StrokeShape="RoundRectangle 30" Padding="20" Background="White">
+            <VerticalStackLayout Spacing="20" >
+                <Label Text="Transaction Category" FontSize="18"/>
+                <Grid ColumnDefinitions="*,*,*"  ColumnSpacing="5">
+
+                    <Border VerticalOptions="Center" BackgroundColor="#fdd" Padding="7,10" StrokeShape="RoundRectangle 15" x:Name="frmExpense">
+                        <VerticalStackLayout>
+                            <Image Source="expense.png" HeightRequest="40" HorizontalOptions="Center"/>
+                            <Label Text="Expense" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border VerticalOptions="Center" BackgroundColor="#ddf" Padding="7,10" Grid.Column="1" StrokeShape="RoundRectangle 15" x:Name="frmIncome">
+                        <VerticalStackLayout>
+                            <Image Source="income.png" HeightRequest="40" HorizontalOptions="Center"/>
+                            <Label Text="Income" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border VerticalOptions="Center" BackgroundColor="#dfd" Padding="7,10" Grid.Column="2" StrokeShape="RoundRectangle 15" x:Name="frmTransfer">
+                        <VerticalStackLayout>
+                            <Image Source="transfer.png" HeightRequest="40" HorizontalOptions="Center"/>
+                            <Label Text="Transfer" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                </Grid>               
+            </VerticalStackLayout>
+        </Border>
+        <Local:ViewTabBar Grid.Row="1" index="2"/>
+    </Grid>
+    
+</ContentPage>

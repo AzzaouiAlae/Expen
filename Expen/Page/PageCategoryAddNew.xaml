@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.PageCategoryAddNew"
+             Title="">
+
+    <Grid BackgroundColor="#EBEBEB">
+        <Border BackgroundColor="White" VerticalOptions="Center" StrokeShape="RoundRectangle 20" Padding="10,10,10,30" x:Name="frm">
+            <VerticalStackLayout Spacing="20">
+                <Grid ColumnDefinitions="Auto,*,Auto" >
+                    <Label Text="&#60;" FontSize="50" x:Name="lblBack" ScaleX=".65" VerticalOptions="Center"/>
+                    <Label Text="Add new Category" x:Name="lblTitle" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" FontSize="18"/>
+                </Grid>
+                <HorizontalStackLayout Grid.Row="1" Grid.ColumnSpan="2" x:Name="hLayout" HorizontalOptions="Center" Spacing="5">
+                    <Button Background="#000" AutomationId="#fff" BorderColor="White" BorderWidth="0" Clicked="Button_Clicked"/>
+                    <Button Background="#faa" AutomationId="#faa" BorderColor="White" BorderWidth="5" Clicked="Button_Clicked"/>
+                    <Button Background="#aaf" AutomationId="#aaf" BorderColor="White" BorderWidth="5" Clicked="Button_Clicked"/>
+                    <Button Background="#afa" AutomationId="#afa" BorderColor="White" BorderWidth="5" Clicked="Button_Clicked"/>
+                </HorizontalStackLayout>
+
+                <Border Padding="1" Stroke="#D2BBF2" StrokeShape="RoundRectangle 24" >
+                    <Grid ColumnDefinitions="*,*" >
+                        <Button BackgroundColor="#D2BBF2" Text="Expense" TextColor="Black" x:Name="btnExpense" Clicked="btnExpense_Clicked"/>
+                        <Button Grid.Column="1" BackgroundColor="#fff" Text="Income" TextColor="Black" x:Name="btnIncome" Clicked="btnIncome_Clicked"/>
+                    </Grid>
+                </Border>
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                    <Image HeightRequest="50"  HorizontalOptions="Center" VerticalOptions="Center" x:Name="imgCategory" Source="photog.png" Aspect="AspectFit" >
+                        <Image.Clip>
+                            <RoundRectangleGeometry CornerRadius="10" Rect="0,0,50,50"/>
+                        </Image.Clip>
+                    </Image>
+                    <Entry Placeholder="Category name" PlaceholderColor="#666" Grid.Column="1" x:Name="txtName"/>
+                </Grid>
+                <Editor AutoSize="TextChanges" HeightRequest="100" Placeholder="Description" PlaceholderColor="#666" x:Name="txtDescription"/>
+                <Button Text="Save" x:Name="btnSave" Clicked="btnSave_Clicked" />
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
+        
+    
+</ContentPage>

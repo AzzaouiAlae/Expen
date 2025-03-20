@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.PageTransfer" xmlns:Local="clr-namespace:Expen"
+             Title="">
+
+    <Grid BackgroundColor="#EBEBEB" x:Name="myGrid" >
+        <ScrollView>
+            <Border VerticalOptions="Center" BackgroundColor="White" Padding="0,0,0,35" Stroke="White" x:Name="myBorder" Margin="0,40">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="30"/>
+                </Border.StrokeShape>
+                
+                <VerticalStackLayout Spacing="20" Padding="10,0" >
+                    <Grid ColumnDefinitions="60,*,60" >
+                        <Label Text="&#60;" FontSize="50" x:Name="lblBack"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="BeVietnamProSemiBold" ScaleX=".65"  />
+                        <Label Text="Transfer" x:Name="lblTitle" Grid.Column="1" FontSize="16"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <Label Text="x" FontSize="40" x:Name="lblCancel" HorizontalTextAlignment="Center" Grid.Column="2" FontFamily="BeVietnamProSemiBold" ScaleY=".8" />
+                    </Grid>
+
+                    <Border Margin="0,-10,0,0"/>
+
+                    <Grid ColumnDefinitions="Auto,*" Margin="0,-10">
+                        <Label FontSize="15" x:Name="lblDateTime" TextColor="#999" VerticalOptions="Center"/>
+                        <Button BackgroundColor="Transparent" ImageSource="pen.png" Grid.Column="1" HorizontalOptions="Start" x:Name="btnEditDateTime" Clicked="btnEditDateTime_Clicked"/>
+                    </Grid>
+                    
+                    <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,*" ColumnSpacing="5" RowSpacing="10">
+                        <Local:ViewSelectedWallet x:Name="ViewWalletSelected1" Loaded="ViewWalletSelected1_Loaded" />
+                        <Border StrokeShape="RoundRectangle 8" Grid.Column="2" Padding="10,5" BackgroundColor="#8458A4" x:Name="frmNewWallet1">
+                            <Label Text="+" VerticalOptions="Center" FontSize="25" FontFamily="BeVietnamProSemiBold"/>
+                        </Border>
+                        
+                        <Local:ViewSelectedWallet x:Name="ViewWalletSelected2" Grid.Row="1" />
+                        <Border StrokeShape="RoundRectangle 8" Grid.Row="1" Grid.Column="2" Padding="10,5" BackgroundColor="#8458A4" x:Name="frmNewWallet2">
+                            <Label Text="+" VerticalOptions="Center" FontSize="25" FontFamily="BeVietnamProSemiBold"/>
+                        </Border>
+                    </Grid>
+                    <Entry Placeholder="Amount ($)" x:Name="txtAmount" Keyboard="Numeric" FontFamily="BeVietnamProSemiBold" HorizontalTextAlignment="Center" PlaceholderColor="#888" FontSize="16" TextChanged="txtAmount_TextChanged"/>
+                    
+                    <Button Text="Save" x:Name="btnSave" Clicked="btnSave_Clicked"/>
+                    <Button Text="Delete" x:Name="btnDelete" Clicked="btnDelete_Clicked" IsVisible="False"/>
+                </VerticalStackLayout>
+
+            </Border>
+        </ScrollView>
+    </Grid>
+</ContentPage>

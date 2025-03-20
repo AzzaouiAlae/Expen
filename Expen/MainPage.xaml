@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.MainPage" Title="" Shell.NavBarIsVisible="False">
+
+
+    <Grid RowDefinitions=".65*,.35*" BackgroundColor="#F5ECFF" x:Name="myGrid">
+        
+        <AbsoluteLayout Grid.Row="1" x:Name="absLayout">
+            
+            <Frame BorderColor="#D2BBF2" x:Name="frm1" >
+                <Frame.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FFF" Offset="1"/>
+                        <GradientStop Color="#D2BBF2" Offset=".3"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+            </Frame>
+            
+            <Frame BorderColor="#D2BBF2" x:Name="frm2">                
+                <Frame.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#D2BBF2" Offset=".8"/>
+                        <GradientStop Color="#FFF" Offset="0"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+            </Frame>
+            
+        </AbsoluteLayout>
+
+        <Image x:Name="img" Source="photoa.png" Aspect="Fill">
+            <Image.Clip>
+                <RoundRectangleGeometry x:Name="imgClip" CornerRadius="0,0,30,30"/>
+            </Image.Clip>
+        </Image>
+        <Image x:Name="img_left"  HeightRequest="40" Source="left_arrow.png" HorizontalOptions="Start" VerticalOptions="Center" Margin="20,0,0,0" Opacity=".75" IsVisible="False"/>
+        <Image x:Name="img_Right" HeightRequest="40" Source="right_arrow.png" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,20,0" Opacity=".75"/>        
+        
+        <Grid Grid.Row="1" RowDefinitions="*,*" Padding="15,20">            
+            <Label FontSize="20" x:Name="lbl1">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Track every cash flow" TextColor="#8458A4" FontFamily="BeVietnamProSemiBold"/>
+                        <Span Text=" from all sources"  FontFamily="BeVietnamProMedium"/>
+                        <Span Text=" with Expen" TextColor="#8458A4" FontFamily="BeVietnamProSemiBold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            
+            <Label FontSize="20" x:Name="lbl2" IsVisible="False">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Manage income &#38; expenses"  FontFamily="BeVietnamProMedium"/>
+                        <Span Text=" Conveniently and efficiently" TextColor="#8458A4" FontFamily="BeVietnamProSemiBold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            
+            <Label FontSize="20" x:Name="lbl3" IsVisible="False">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="User-friendly interface,&#xA;"  FontFamily="BeVietnamProMedium"/>
+                        <Span Text="easy to use" TextColor="#8458A4" FontFamily="BeVietnamProSemiBold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            
+            <Label FontSize="20" x:Name="lbl4" IsVisible="False">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Spend Smart, Shape&#xA; Tomorrow" TextColor="#8458A4" FontFamily="BeVietnamProSemiBold"/>
+                        <Span Text=" With "  FontFamily="BeVietnamProMedium"/>
+                        <Span Text="Expen" TextColor="#8458A4" FontFamily="BeVietnamProSemiBold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            
+            <Button Grid.Row="1" VerticalOptions="Start" BackgroundColor="#8458A4" Text="Start" FontFamily="BeVietnamPro" CornerRadius="20" Clicked="Button_Clicked"/>            
+        </Grid>
+    </Grid>
+
+</ContentPage>

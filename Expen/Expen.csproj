@@ -1,0 +1,220 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
+
+		<!-- Note for MacCatalyst:
+		The default runtime is maccatalyst-x64, except in Release config, in which case the default is maccatalyst-x64;maccatalyst-arm64.
+		When specifying both architectures, use the plural <RuntimeIdentifiers> instead of the singular <RuntimeIdentifier>.
+		The Mac App Store will NOT accept apps with ONLY maccatalyst-arm64 indicated;
+		either BOTH runtimes must be indicated or ONLY macatalyst-x64. -->
+		<!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
+
+		<OutputType>Exe</OutputType>
+		<RootNamespace>Expen</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<!-- Display name -->
+		<ApplicationTitle>Expen</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.expen</ApplicationId>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
+	  <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="Transparent" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#FFFFFF" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <AndroidResource Remove="Resources\Images\category_icon\**" />
+	  <Compile Remove="Resources\Images\category_icon\**" />
+	  <EmbeddedResource Remove="Resources\Images\category_icon\**" />
+	  <MauiCss Remove="Resources\Images\category_icon\**" />
+	  <MauiImage Remove="Resources\Images\category_icon\**" />
+	  <MauiXaml Remove="Resources\Images\category_icon\**" />
+	  <None Remove="Resources\Images\category_icon\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Fonts\BeVietnamPro-Medium.ttf" />
+	  <None Remove="Resources\Fonts\BeVietnamPro-Regular.ttf" />
+	  <None Remove="Resources\Fonts\BeVietnamPro-SemiBold.ttf" />
+	  <None Remove="Resources\Images\add_white.svg" />
+	  <None Remove="Resources\Images\add_whitee.svg" />
+	  <None Remove="Resources\Images\bank_a.svg" />
+	  <None Remove="Resources\Images\bank_b.svg" />
+	  <None Remove="Resources\Images\bank_c.svg" />
+	  <None Remove="Resources\Images\bank_card_a.svg" />
+	  <None Remove="Resources\Images\bank_card_b.svg" />
+	  <None Remove="Resources\Images\bank_card_c.svg" />
+	  <None Remove="Resources\Images\business_profits.svg" />
+	  <None Remove="Resources\Images\freelancing.svg" />
+	  <None Remove="Resources\Images\gifts.svg" />
+	  <None Remove="Resources\Images\government_benefits.svg" />
+	  <None Remove="Resources\Images\hand_mony.svg" />
+	  <None Remove="Resources\Images\icon_home.png" />
+	  <None Remove="Resources\Images\icon_home_black.png" />
+	  <None Remove="Resources\Images\icon_more.png" />
+	  <None Remove="Resources\Images\icon_more_black.png" />
+	  <None Remove="Resources\Images\icon_report.png" />
+	  <None Remove="Resources\Images\icon_report_black.png" />
+	  <None Remove="Resources\Images\icon_wallet.png" />
+	  <None Remove="Resources\Images\icon_wallet_black.png" />
+	  <None Remove="Resources\Images\investments.svg" />
+	  <None Remove="Resources\Images\left_arrow.svg" />
+	  <None Remove="Resources\Images\options.svg" />
+	  <None Remove="Resources\Images\pen.svg" />
+	  <None Remove="Resources\Images\Pension.svg" />
+	  <None Remove="Resources\Images\photoa.png" />
+	  <None Remove="Resources\Images\photob.png" />
+	  <None Remove="Resources\Images\photoc.png" />
+	  <None Remove="Resources\Images\photod.png" />
+	  <None Remove="Resources\Images\photof.png" />
+	  <None Remove="Resources\Images\photog.png" />
+	  <None Remove="Resources\Images\rental_income.svg" />
+	  <None Remove="Resources\Images\report.svg" />
+	  <None Remove="Resources\Images\report_color.svg" />
+	  <None Remove="Resources\Images\right_arrow.svg" />
+	  <None Remove="Resources\Images\salary.svg" />
+	  <None Remove="Resources\Images\sale_of_assets.svg" />
+	  <None Remove="Resources\Images\transfer.svg" />
+	  <None Remove="Resources\Images\wallet_a.svg" />
+	  <None Remove="Resources\Images\wallet_b.svg" />
+	  <None Remove="Resources\Images\wallet_c.svg" />
+	  <None Remove="Resources\Images\wallet_d.svg" />
+	  <None Remove="Resources\Images\wallet_e.svg" />
+	  <None Remove="Resources\Images\wallet_f.svg" />
+	  <None Remove="Resources\Images\wallet_g.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Page\PageReport.xaml.cs">
+	    <DependentUpon>PageReport.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Page\PageCategoryAddNew.xaml.cs">
+	    <DependentUpon>PageCategoryAddNew.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Page\PageWalletAddEdit.xaml.cs">
+	    <DependentUpon>PageWalletAddEdit.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="View\ViewReportAnalysis.xaml.cs">
+	    <DependentUpon>ViewReportAnalysis.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="View\ViewSelectedCategory.xaml.cs">
+	    <DependentUpon>ViewSelectedCategory.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Page\PageReport.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Page\PageCategoryAddNew.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Page\PageHome.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Page\PageStrat.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Page\PageTransaction.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Page\PageTransactionAddEdit.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Page\PageTransfer.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Page\PageWalletAddEdit.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Page\PageWalletDetails.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Page\PageWallets.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewAnalysis.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewAnalysisWallet.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewCategorySelector.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewDefaultIcon.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewEditeDateTime.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewReportAnalysis.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewSelectedWallet.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewSelectedCategory.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewTabBar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewTransaction.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewWallet.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewWalletSelector.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.PageWallets" xmlns:Local="clr-namespace:Expen"
+             Title="">
+
+    <Grid RowDefinitions="*,Auto" Background="#EBEBEB">
+        <ScrollView>
+            <VerticalStackLayout Padding="0,30" Spacing="25">
+
+                <Border Background="White">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
+                    <VerticalStackLayout Padding="16">
+                        <HorizontalStackLayout Spacing="5">
+                            <Label Text="Payment Accounts" FontSize="20" />
+                            <Label x:Name="lblWalletCount" Text="(0)" FontSize="12" />
+                        </HorizontalStackLayout>
+                        <Grid ColumnDefinitions="*,*" >
+                            <Label Text="Total Budget:" VerticalOptions="End" TextColor="#777" FontSize="12"/>
+                            <Button Grid.Column="1" HorizontalOptions="End" Padding="10,0" Text="Add New Wallet" CornerRadius="20" HeightRequest="35"  FontSize="12" Clicked="Button_Clicked"/>
+                        </Grid>
+
+                        <Label Text="$45,54" x:Name="lblTotalBadget" FontSize="22" Margin="0,0,0,20"/>
+
+                        <ScrollView Orientation="Horizontal" >
+                            <HorizontalStackLayout HeightRequest="120" Spacing="10" x:Name="hLayout"/>
+                        </ScrollView>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Background="White">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20"/>
+                    </Border.StrokeShape>
+                    <VerticalStackLayout MinimumHeightRequest="300" Padding="16">
+                        <Label Text="Cash Flow Statistics" FontSize="20" />
+
+                        <Border Stroke="#8458A4" Padding="0,5" Margin="0,10" StrokeShape="RoundRectangle 8">
+                            <Grid ColumnDefinitions="60,*,60">
+                                <Label Text="&#60;" FontSize="25" ScaleX=".7" x:Name="lblBack"  HorizontalOptions="Fill" HorizontalTextAlignment="Center"/>
+                                <Label Grid.Column="1" x:Name="lblDate" HorizontalOptions="Center" VerticalOptions="Center" />
+                                <Label Grid.Column="2" Text="&#62;" FontSize="25" ScaleX=".7" x:Name="lblNext"  HorizontalOptions="Fill" HorizontalTextAlignment="Center"/>
+                            </Grid>
+                        </Border>
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="5">
+                            <Border Margin="0,15" HeightRequest="2"/>
+                            <Button Grid.Column="1" x:Name="btnAddTranaction" Clicked="btnAddTranaction_Clicked" Padding="10,0" HeightRequest="35" Text="Add new transaction" FontSize="12"/>
+                        </Grid>
+                        <Label Text="Transactions in the Month" FontSize="15" Margin="0,0,0,15"/>
+
+                        <VerticalStackLayout x:Name="vLayoutTransaction" Spacing="15"/>
+                    </VerticalStackLayout>
+                </Border>
+                
+            </VerticalStackLayout>
+        </ScrollView>
+        
+        <Local:ViewTabBar Grid.Row="1" index="1"/>
+    </Grid>
+        
+</ContentPage>

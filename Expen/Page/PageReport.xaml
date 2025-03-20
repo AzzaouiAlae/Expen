@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.PageReport" xmlns:Local="clr-namespace:Expen"
+             Title="" >
+    
+    <Grid RowDefinitions="Auto,*,Auto" Background="#EBEBEB" x:Name="myGrid">
+        <Border StrokeShape="RoundRectangle 0,0,20,20" Background="#F5ECFF">
+            
+            <VerticalStackLayout Padding="15,15,15,0">
+                <Label Text="Expense, Income Analysis" HorizontalOptions="Center" FontSize="17"/>
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                    <Picker HeightRequest="20" x:Name="PickerBy" SelectedIndexChanged="PickerBy_SelectedIndexChanged"/>
+                    <Border Stroke="#8458A4" Padding="0,5" Margin="0,10" Grid.Column="1" StrokeShape="RoundRectangle 8" StrokeThickness=".5">                        
+                        <Grid ColumnDefinitions="50,*,50">
+                            <Label Text="&#60;" FontSize="25" ScaleX=".7" x:Name="lblBackDate" HorizontalTextAlignment="Center" />
+                            <Label Grid.Column="1" x:Name="lblDate" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="13"/>
+                            <Label Grid.Column="2" Text="&#62;" FontSize="25" ScaleX=".7" x:Name="lblNextDate" HorizontalTextAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+                <Grid ColumnDefinitions="*,*" Padding="30,0" ColumnSpacing="5">
+                    <Button x:Name="btnExpense" Text="Expense" Background="Transparent" TextColor="#000" Padding="0" Clicked="btnExpense_Clicked"/>
+                    <Border x:Name="brExpense" HeightRequest="4" VerticalOptions="End" StrokeThickness="4" Stroke="#8458A4"/>
+                    <Button x:Name="btnIncome" Grid.Column="1" Text="Income" Background="Transparent" TextColor="#888" Padding="0" Clicked="btnIncome_Clicked"/>
+                    <Border x:Name="brIncome" Grid.Column="1" HeightRequest="4" VerticalOptions="End" StrokeThickness="4"/>
+                </Grid>
+            </VerticalStackLayout>
+        </Border>
+
+        <ScrollView Padding="0,0,0,10" Grid.Row="1" >
+            <VerticalStackLayout >
+                <Border Background="White" StrokeShape="RoundRectangle 20" Margin="0,20" Padding="20,30">
+                    <VerticalStackLayout>
+                        <Label Text="Expense Chart" FontSize="18" x:Name="lblExpenseChart"/>
+                        <HorizontalStackLayout HorizontalOptions="Center" Spacing="30" x:Name="hsLayoutExpense">
+                            <Local:ViewReportAnalysis Opacity=".6" AnalysisType="Expense"/>
+                            <Local:ViewReportAnalysis Opacity=".6" AnalysisType="Expense"/>
+                            <Local:ViewReportAnalysis AnalysisType="Expense"/>
+                        </HorizontalStackLayout>
+                        
+                        <Label Text="Income Chart" FontSize="20"  x:Name="lblIncomeChart" IsVisible="False"/>
+                        <HorizontalStackLayout HorizontalOptions="Center" Spacing="30" x:Name="hsLayoutIncome" IsVisible="False">
+                            <Local:ViewReportAnalysis Opacity=".6" AnalysisType="Income"/>
+                            <Local:ViewReportAnalysis Opacity=".6" AnalysisType="Income"/>
+                            <Local:ViewReportAnalysis AnalysisType="Income"/>
+                        </HorizontalStackLayout>                        
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Background="White" StrokeShape="RoundRectangle 20" Margin="0,20" Padding="20,30">
+                    <VerticalStackLayout Spacing="30">
+                        <Label x:Name="lblExpenseCategory" Text="Expense Chart by Category" FontSize="18" />
+                        <VerticalStackLayout x:Name="vLayoutExpenseCategory" Spacing="10">
+                            
+                        </VerticalStackLayout>
+
+                        <Label x:Name="lblIncomeCategory" Text="Income Chart by Category" FontSize="18" IsVisible="False"/>
+                        <VerticalStackLayout x:Name="vLayoutIncomeCategory" Spacing="10" IsVisible="False">
+
+                        </VerticalStackLayout>
+
+
+                    </VerticalStackLayout>
+                </Border>
+                
+            </VerticalStackLayout>
+        </ScrollView>
+        
+        <Local:ViewTabBar Grid.Row="2" index="3"/>
+    </Grid>
+</ContentPage>

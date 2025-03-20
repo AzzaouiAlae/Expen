@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.ViewAnalysisWallet">
+
+    <Grid ColumnDefinitions="*,*,*"   >
+        <VerticalStackLayout VerticalOptions="End" >
+            <Label Text="Money In:" HorizontalOptions="Center" FontSize="12"/>
+            <Label Text="300$" FontFamily="BeVietnamProSemiBold" FontSize="15" HorizontalOptions="Center" x:Name="lblBlue"/>
+            <Border x:Name="boxBlue">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15,15,15,0"/>
+                </Border.StrokeShape>
+
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#AAF" Offset="1"/>
+                        <GradientStop Color="#00B" Offset="0"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout VerticalOptions="End" Grid.Column="1"  >
+            <Label Text="Money Out:" HorizontalOptions="Center" FontSize="12"/>
+            <Label Text="-154$" FontFamily="BeVietnamProSemiBold" FontSize="15" HorizontalOptions="Center" x:Name="lblRed"/>
+            <Border x:Name="boxRed">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,15,0,0"/>
+                </Border.StrokeShape>
+
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FAA" Offset="1"/>
+                        <GradientStop Color="#B00" Offset="0"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout VerticalOptions="End" Grid.Column="2" >
+            <Label Text="Balance:" HorizontalOptions="Center" FontSize="12" />
+            <Label Text="140$" FontFamily="BeVietnamProSemiBold" FontSize="15" HorizontalOptions="Center" x:Name="lblGreen"/>
+            <Border x:Name="boxGreen">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,15,0,0"/>
+                </Border.StrokeShape>
+
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#AFA" Offset="1"/>
+                        <GradientStop Color="#0B0" Offset="0"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentView>

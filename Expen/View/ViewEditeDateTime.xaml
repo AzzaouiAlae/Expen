@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.View.ViewEditeDateTime">
+    
+    <Border Margin="20" Background="White" Padding="20">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="30"/>            
+        </Border.StrokeShape>
+
+        <VerticalStackLayout Spacing="15">
+            <Label Text="Edit Date and Time" FontSize="16" HorizontalOptions="Center"/>
+            <DatePicker x:Name="pikDate" HorizontalOptions="Center" Format="dd MMMM yyyy"/>
+            <TimePicker x:Name="pikTime" HorizontalOptions="Center"/>
+            
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                <Button Text="OK" x:Name="btnOk" Clicked="btnOk_Clicked" />
+                <Button Text="Cancel" Grid.Column="1" x:Name="btnCancel" Clicked="btnCancel_Clicked"/>
+            </Grid>
+        </VerticalStackLayout>        
+    </Border>
+    
+</ContentView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.ViewCategorySelector">
+    <Grid>
+        <VerticalStackLayout x:Name="SL" Background="#AAA" Opacity=".5"/>
+        
+        <Border Margin="0,70" Padding="10,0" Background="#FFF">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="30"/>
+            </Border.StrokeShape>
+            
+            <ScrollView>
+                <VerticalStackLayout Spacing="20" Padding="15">
+                    <Label Text="Select Wallet" FontSize="18" HorizontalOptions="Center" />
+                    <VerticalStackLayout x:Name="vLayout" Spacing="10">
+                        
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </ScrollView>
+            
+        </Border>
+        
+    </Grid>
+</ContentView>

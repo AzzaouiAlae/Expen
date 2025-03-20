@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.ViewWallet">
+
+    <Border  HeightRequest="120" StrokeShape="RoundRectangle 10" WidthRequest="180" BackgroundColor="#eef" Padding="10" x:Name="frm">
+        
+        <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="Auto,*" ColumnSpacing="3" MaximumWidthRequest="160">
+
+            <Image   x:Name="WalletImg"  Grid.RowSpan="2" HeightRequest="44" WidthRequest="44" VerticalOptions="Start"/>
+
+            <Label  HorizontalOptions="Start" FontSize="16" x:Name="lblType" Grid.Column="1"/>
+            <Label  TextColor="#777" HorizontalOptions="Start" x:Name="lblName" Grid.Row="1" Grid.Column="1"/>
+            <HorizontalStackLayout Grid.Row="2" HorizontalOptions="Center" Spacing="3" Grid.ColumnSpan="2">
+                <Label x:Name="lblBalance" />
+            </HorizontalStackLayout>            
+        </Grid>
+        
+    </Border>
+    
+</ContentView>

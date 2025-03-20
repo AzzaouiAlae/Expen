@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.PageWalletDetails" xmlns:Local="clr-namespace:Expen"
+             Title="">
+
+    <ScrollView >
+        <VerticalStackLayout Spacing="20"  Background="#EBEBEB" Padding="0,0,0,10">
+            <Border BackgroundColor="#F5ECFF" Margin="-20,0" Stroke="#F5ECFF">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,0,20,20"/>
+                </Border.StrokeShape>
+
+                <Grid ColumnDefinitions="Auto,*,60" >
+                    <Label Text="&#60;" FontSize="50" x:Name="lblBack"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="BeVietnamProSemiBold" ScaleX=".65"  WidthRequest="60"/>
+                    <Label Text="Wallet Details" x:Name="lblTitle" Grid.Column="1" FontSize="16"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,10,0,0"/>
+                </Grid>            
+            </Border>
+
+            <Border>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="25"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="20" Background="#FFF" Padding="20,10">
+                    <Grid RowDefinitions="*,*" ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10" >
+                        <Border Grid.RowSpan="2" Background="Black" Padding="5" x:Name="brImg">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Image Source="children.png" WidthRequest="55" x:Name="imgWallet"/>
+                        </Border>
+                        <Label Grid.Column="1" Text="Wallet Name" FontSize="16" VerticalOptions="End" x:Name="lblNameWallet"/>
+                        <Label Grid.Column="1" Grid.Row="1" Text="Date Added:15/12/2024" FontSize="11" TextColor="#AAA" HorizontalOptions="Start" x:Name="lblDateWallet"/>
+                        <Button Background="Transparent" ImageSource="options.png" x:Name="btnEditWallet" Clicked="btnEditWallet_Clicked" Grid.Column="2" Grid.RowSpan="2" Padding="0" WidthRequest="38" HeightRequest="38"/>
+                    </Grid>
+                    <Label Text="Total Budget:" VerticalOptions="End" TextColor="#777" Margin="0,0,0,-20" FontSize="12"/>
+                    <Label Text="" x:Name="lblTotalBadget" FontSize="22"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <Border>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="25"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Background="#FFF" Spacing="20" Padding="20,10">
+                    <Label Text="Cash Flow Statistics" FontSize="20" Margin="0,20,0,-20"/>
+
+                    <Border Stroke="#8458A4" Padding="0,5" Margin="0,10" >
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="8"/>
+                        </Border.StrokeShape>
+                        <Grid ColumnDefinitions="60,*,60">
+                            <Label Text="&#60;" FontSize="25" ScaleX=".7" x:Name="lblBackDate"  HorizontalOptions="Fill" HorizontalTextAlignment="Center"/>
+                            <Label Grid.Column="1" x:Name="lblDate" HorizontalOptions="Center" VerticalOptions="Center" />
+                            <Label Grid.Column="2" Text="&#62;" FontSize="25" ScaleX=".7" x:Name="lblNextDate"  HorizontalOptions="Fill" HorizontalTextAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                    <Local:ViewAnalysisWallet x:Name="vAnalysis"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <Border>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="25"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Background="#FFF" Spacing="20" Padding="20,10">
+                    <Label Text="Transactions in the Month" FontSize="15" Margin="0,0,0,15"/>
+
+                    <VerticalStackLayout x:Name="vLayoutTransaction" Spacing="8" Padding="0,0,0,20">
+
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

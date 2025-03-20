@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.PageWalletAddEdit" xmlns:Local="clr-namespace:Expen"
+             Shell.NavBarIsVisible="False">
+
+    <Grid Background="#EBEBEB" RowDefinitions="*" x:Name="myGrid">
+
+        <Border VerticalOptions="Center" StrokeShape="RoundRectangle 25" x:Name="frm" Background="White" Padding="20">
+            <Grid Padding="10,0" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*" RowSpacing="10" ColumnSpacing="5" >
+                <Label Text="Add New Wallet" x:Name="lblTitle" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" Grid.ColumnSpan="3"/>
+
+                <VerticalStackLayout Grid.Row="1" Grid.ColumnSpan="2">
+                    <HorizontalStackLayout  x:Name="hLayout" HorizontalOptions="Center" Spacing="5">
+                        <Button Background="#000" AutomationId="#fff" BorderColor="White" BorderWidth="0" Clicked="Button_Clicked"/>
+                        <Button Background="#faa" AutomationId="#faa" BorderColor="White" BorderWidth="5" Clicked="Button_Clicked"/>
+                        <Button Background="#aaf" AutomationId="#aaf" BorderColor="White" BorderWidth="5" Clicked="Button_Clicked"/>
+                        <Button Background="#afa" AutomationId="#afa" BorderColor="White" BorderWidth="5" Clicked="Button_Clicked"/>
+                    </HorizontalStackLayout>
+
+                    <Image HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center" 
+                           x:Name="WalletIcon" Source="photog.png" Aspect="AspectFit"/>
+                </VerticalStackLayout>
+
+                <Label Text="Type : " VerticalOptions="Center" Grid.Row="2"/>
+                <Entry Grid.Column="1" Grid.Row="2" x:Name="txtType" HorizontalTextAlignment="Center"/>
+
+                <Label Text="Name : " Grid.Row="3" VerticalOptions="Center" />
+                <Entry Grid.Row="3" Grid.Column="1" x:Name="txtName" HorizontalTextAlignment="Center"/>
+
+                <Label Text="Balance : " Grid.Row="4" VerticalOptions="Center"/>
+                <Entry Grid.Row="4" Grid.Column="1" x:Name="txtBalance" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+
+                <Grid Grid.Row="5" Grid.ColumnSpan="2" ColumnDefinitions="*,*" ColumnSpacing="10">
+                    <Button Text="Save Wallet" x:Name="btnSave" Clicked="btnSave_Clicked"/>
+                    <Button Text="Cancel" Grid.Column="1" x:Name="btnCancel" Clicked="btnCancel_Clicked"/>
+                </Grid>
+
+                <Button Text="Delete" Grid.Row="6" Grid.ColumnSpan="2" x:Name="btnDelete" Clicked="btnDelete_Clicked" IsVisible="False"/>
+            </Grid>
+        </Border>
+
+        
+    </Grid>
+    
+</ContentPage>

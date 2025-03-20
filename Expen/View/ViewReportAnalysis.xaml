@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Expen.ViewReportAnalysis">
+    
+    <VerticalStackLayout VerticalOptions="End" Spacing="5">
+        
+        <Label x:Name="lblAmount" HorizontalOptions="Center"/>        
+        <Border StrokeShape="RoundRectangle 10" Background="#F66" x:Name="br" WidthRequest="70"/>
+        <Label x:Name="lblDate" HorizontalOptions="Center" Margin="0,15,0,0" HorizontalTextAlignment="Center"/>
+        
+    </VerticalStackLayout>
+    
+</ContentView>
